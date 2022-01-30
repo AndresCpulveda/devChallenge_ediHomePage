@@ -1,0 +1,175 @@
+* {
+    /* outline: #f00 solid 1px; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Poppins', monospace;
+}
+body {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+}
+li {
+    list-style: none;
+}
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+h1 {
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 800;
+    font-family: 'Heebo';
+    line-height: 53px;
+    color: #333;
+}
+header ul {
+    display: none;
+    justify-self: flex-end;
+}
+header ul li {
+    font-size: 24px;
+    line-height: 36px;
+}
+header i {
+    font-size: 18px;
+    align-self: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+    padding: 4vw;
+}
+main .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+.presentation p {
+    align-self: flex-start;
+    font-size: 12px;
+    line-height: 18px;
+    color: #2D9CDB;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #333;
+}
+.presentation img {
+    width: 348px;
+    height: auto;
+    border-radius: 1vw;
+}
+.presentation .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.contact p {
+    color: #333;
+    font-weight: 400;
+}
+form label {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #828282;
+}
+form .inputSpace {
+    width: 291px;
+    background: #f2f2f2;
+    border-radius: .7vw;
+    height: 5vh;
+}
+.inputSpace #mailInput {
+    background: #f2f2f2;
+    border: none;
+    width: 70%;
+    color: #BDBDBD;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    padding: 10px;
+}
+.inputSpace .submitButton {
+    background: #2D9CDB;
+    border-radius: 1vw;
+    border: none;
+    height: 85%;
+    width: 27%;
+    color: #F2F2F2;
+    font-size: 14px;
+    line-height: 21px;
+}
+main .services {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.services .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+}
+.cardsContainer .card {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    gap: 5vh;
+    box-shadow: rgba(51, 51, 51, 0.1) 0px 10px 30px;
+    border-radius: 5vw;
+}
+.card i {
+    color: #fff;
+    padding: 1vh;
+    width: fit-content;
+    font-size: 30px;
+    border-radius: 2vw;
+}
+.card1 i {
+    background: #2D9CDB;
+}
+.card2 i {
+    background: #27AE60;
+}
+.card3 i {
+    background: #EB5757;
+}
+.card .cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.cardTextContainer h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333;
+}
+.cardTextContainer p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F4F4F;
+}
+.cardTextContainer button {
+    width: 40%;
+    background: #2D9CDB;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    border: none;
+    height: 5vh;
+    border-radius: 2vw;
+}
