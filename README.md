@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot]()
+![screenshot](https://github.com/AndresCpulveda/devChallenge_ediHomePage/blob/main/Screen%20Shot%202022-02-02%20at%2010.17.08%20AM.png)
 
 
 - My demo is depoyed in netlify, link above.
