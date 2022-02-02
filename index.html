@@ -14,21 +14,23 @@
 <body>
   <header>
     <h1>edie</h1>
-    <ul>
-      <li>home</li>
-      <li>services</li>
-      <li>our work</li>
-      <li>clients</li>
-      <li>contact</li>
+    <ul id="menu">
+      <li><a onclick="hideMenu()" href="#home">home</a></li>
+      <li><a onclick="hideMenu()" href="#services">services</a><services</li>
+      <li><a onclick="hideMenu()" href="#ourWorks">our works</a><our work</li>
+      <li><a onclick="hideMenu()" href="#clients">clients</a><clients</li>
+      <li><a onclick="hideMenu()" href="#contact">contact</a><contact</li>
     </ul>
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars" onclick="showMenu()"></i>
   </header>
   <main>
     <section class="presentation">
+      <span id="home"></span>
       <p>Unhappy with your website?</p>
       <h2>We create beautiful and fast web services</h2>
       <img src="./heroImage.jpg" alt="">
       <div class="contact">
+        <span id="contact"></span>
         <h2>Story, emotion and purpose</h2>
         <p>We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
         <form action="">
@@ -41,6 +43,7 @@
       </div>  
     </section>
     <section class="services">
+      <span id="services"></span>
       <h2>We offer high demand services</h2>
       <div class="cardsContainer">
         <div class="card card1">
@@ -70,26 +73,27 @@
       </div>
     </section>
     <section class="designExamples">
+      <span id="ourWorks"></span>
       <h2>Good design means good business</h2>
-      <div class="designContainer">
+      <div class="designContainer designContainer1">
         <img src="./smarthome.jpg" alt="">
         <p>Full stack application</p>
         <h4>Smart home dashboard</h4>
       </div>
-      <div class="designContainer">
+      <div class="designContainer designContainer2">
         <img src="./onboard.png" alt="">
         <p>UX/UI design</p>
         <h4>Onboard application</h4>
       </div>
-      <div class="designContainer">
+      <div class="designContainer designContainer3">
         <img src="./booking.png" alt="">
         <p>Mobile application</p>
         <h4>Booking system</h4>
       </div>
-      <div class="designContainer">
+      <div class="designContainer designContainer4">
         <img src="./juice-product.png" alt="">
-        <p>Booking system</p>
-        <h4>Booking system</h4>
+        <p>Front End application</p>
+        <h4>Juice product homepage</h4>
       </div>
       <a href="">see more<i class="fas fa-long-arrow-alt-right"></i> </a>
     </section>
@@ -110,6 +114,7 @@
       </div>
     </section>
     <section class="testimonie">
+      <span id="clients"></span>
       <h2>“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”</h2>
       <div class="profileCard">
         <figure>
@@ -125,13 +130,13 @@
   <footer>
     <div class="footerMenu">
       <ul>
-        <li>home</li>
-        <li>services</li>
-        <li>our work</li>
-        <li>clients</li>
-        <li>contact</li>
-      </ul>  
-    </div>
+        <li><a href="#home">home</a></li>
+        <li><a href="#services">services</a><services</li>
+        <li><a href="#ourWorks">our works</a><our work</li>
+        <li><a href="#clients">clients</a><clients</li>
+        <li><a href="#contact">contact</a><contact</li>
+      </ul>
+      </div>
     <div class="socialIcons">
       <h1>Edie</h1>
       <ul>
@@ -147,7 +152,10 @@
         <input type="submit" value="Join" class="submitButton">
       </div>
     </form>
+  </footer>
+  <footer class="footer2">    
     <p>created by AndresCpulveda - devChallenges.io</p>
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>

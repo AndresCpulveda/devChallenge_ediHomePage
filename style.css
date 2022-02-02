@@ -16,9 +16,12 @@ li {
     list-style: none;
 }
 header {
-    padding: 5vw;
+    position: fixed;
+    background:#fff;
+    padding: 1vw;
     display: flex;
     width: 100%;
+    height: 8vh;
     justify-content: space-between;
 }
 h1 {
@@ -30,18 +33,48 @@ h1 {
     color: #333;
 }
 header ul {
-    display: none;
-    justify-self: flex-end;
+    display: flex;
+    background: #828282;
+    position: absolute;
+    left: 100vw;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 100vw;
+    gap: 10px;
+    transition: .3s;
 }
-header ul li {
+header ul li a{
+    text-transform: capitalize;
     font-size: 24px;
     line-height: 36px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #F2F2F2;
+}
+span {
+    position: relative;
+    top: -8vh;
+}
+li a:hover {
+    color: #2D9CDB;
+    transition: .3s;
 }
 header i {
-    font-size: 18px;
+    font-size: 25px;
     align-self: center;
+    transition: .3s;
+}
+header i:hover {
+    color: #2D9CDB;
+    transform: rotate(90deg);
+}
+.visible {
+    left: 0;
 }
 main {
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     gap: 20vh;
@@ -114,6 +147,7 @@ form .inputSpace {
     font-size: 14px;
     line-height: 21px;
     justify-content: flex-end;
+    cursor: pointer;
 }
 main .services {
     display: flex;
@@ -130,8 +164,11 @@ main .services {
     flex-direction: column;
     padding: 5vw;
     gap: 5vh;
-    box-shadow: rgba(51, 51, 51, 0.1) 0px 10px 30px;
     border-radius: 5vw;
+}
+.cardsContainer .card:hover {
+    box-shadow: rgba(51, 51, 51, 0.1) 0px 10px 30px;
+    transition: .3s;
 }
 .card i {
     color: #fff;
@@ -176,9 +213,12 @@ main .services {
     border: none;
     height: 5vh;
     border-radius: 2vw;
+    cursor: pointer;
 }
 .cardTextContainer button:hover {
     background: #2D9CDB;
+    transition: .3s;
+    color: #fff;
 }
 main .designExamples {
     display: flex;
@@ -189,6 +229,9 @@ main .designExamples {
     display: flex;
     flex-direction: column;
     gap: 1vh;
+}
+.designExamples #ourWorks {
+    top: -35vh;
 }
 .designContainer img {
     width: 100%;
@@ -318,12 +361,18 @@ footer .footerMenu ul {
     display: flex;
     flex-direction: column;
 }
-.footerMenu ul li {
+.footerMenu ul li a{
     color: #fff;
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
     text-transform: capitalize;
+    cursor: pointer;
+    text-decoration: none;
+}
+.footerMenu ul li a:hover {
+    color: #2D9CDB;
+    transition: .3s;
 }
 footer .socialIcons {
     display: flex;
@@ -340,14 +389,242 @@ footer .socialIcons {
 .socialIcons ul li .fab{
     font-size: 25px;
     color: #fff;
+    cursor: pointer;
 }
-footer p {
+.footer2 {
+    display: flex;
+    justify-content: center;
+    margin-top: calc(-7vh - 1px);
+}
+.footer2 p {
     color: #F2F2F2;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
+    align-self: center;
 }
 
 @media (min-width: 1024px) {
-    
+    body {
+        gap: 4vh;
+    }
+    header ul {
+        display: flex;
+        justify-self: flex-end;
+        gap: 4vw;
+    }
+    header ul li a {
+        color: #333;
+    }
+    header .fas {
+        display: none;
+    }
+    main {
+        gap: 30vh;
+        padding: 5vw;
+        align-items: center;
+    }
+    main .presentation {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5vh;
+    }
+    .presentation p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    h2 {
+        font-size: 48px;
+        line-height: 72px;
+    }
+    .presentation img {
+        width: 1332px;
+        align-self: center;
+    }
+    .presentation .contact {
+        width: 50%;
+        gap: 4vh;
+    }
+    .contact p {
+        color: #333;
+        font-weight: 400;
+    }
+    form label {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    form .inputSpace {
+        width: 95%;
+        border-radius: 1vw;
+        height: 6vh;
+        padding: 2px;
+    }
+    .inputSpace #mailInput {
+        width: 95%;
+        height: 3vh;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 10px;
+    }
+    .inputSpace .submitButton {
+        border-radius: 1vw;
+        height: 90%;
+        width: 25%;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    main .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    .services h2 {
+        align-self: flex-start;
+    }
+    .services .cardsContainer {
+        width: 95%;
+        flex-direction: row;
+        gap: 3vh;
+    }
+    .cardsContainer .card {
+        padding: 5vw;
+        gap: 2vh;
+        border-radius: 2vw;
+    }
+    .card i {
+        padding: 1.5vh;
+        font-size: 30px;
+        border-radius: 1vw;
+    }
+    .card .cardTextContainer {
+        gap: 3vh;
+    }
+    .cardTextContainer button {
+        width: 40%;
+        height: 4vh;
+        border-radius: 10px;
+    }
+    main .designExamples {
+        display: grid;
+        grid-template: repeat(10, 1fr)/1fr 1fr;
+        padding: 60px;
+    }
+    .designExamples #ourWorks {
+        grid-area: 2/1/3/2;
+    }
+    .designExamples .designContainer {
+        gap: 2vh;
+    }
+    .designExamples .designContainer1 {
+        grid-area: 2/2/6/3;
+    }
+    .designExamples .designContainer2 {
+        grid-area: 3/1/7/2;
+    }
+    .designExamples .designContainer3 {
+        grid-area: 7/1/11/2;
+    }
+    .designExamples .designContainer4 {
+        grid-area: 6/2/10/3;
+    }
+    .designContainer img {
+        width: 100%;
+        border-radius: 2vh;
+    }
+    .designContainer p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .designContainer h4 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .designExamples a {
+        grid-area: 10/2/11/3;
+        font-size: 24px;
+        line-height: 36px;
+        align-self: center;
+        justify-self: flex-end;
+    }
+    a i {
+        font-size: 28px;
+        margin-left: 2vw;
+    }
+    main .team {
+        flex-direction: row;
+        gap: 10vw;
+    }
+    .team .teamTextContainer {
+        width: 40%;
+        padding: 7vw;
+        justify-content: center;
+        gap: 1vh;
+    }
+    .teamTextContainer p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .team .teamPhotosContainer {
+        width: 60%;
+        gap: 4vw;
+    }
+    .bigTeamPhotoContainer img {
+        width: 100%;
+        height: auto;
+        border-radius: 2vw;
+    }
+    .teamPhotosContainer .smallPhotosContainer {
+        gap: 4vw;
+    }
+    .smallPhotosContainer img {
+        width: 90%;
+        height: auto;
+        border-radius: 2vw;
+    }
+    main .testimonie {
+        align-self: flex-start;
+        padding-left: 100px;
+        width: 75%;
+        gap: 2vh;
+    }
+    .testimonie h2 {
+        font-size: 36px;
+        line-height: 54px;
+    }
+    .testimonie .profileCard {
+        gap: 2vw;
+    }
+    .profileCard figure img {
+        max-width: 5vw;
+        border-radius: 15px;
+    }
+    footer {
+        flex-direction: row;
+        padding: 5vw 10vw;
+        gap: 0vh;
+        justify-content: space-between;
+    }
+    footer form {
+        width: 30%;
+    }
+    footer .footerMenu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .footerMenu ul li {
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        text-transform: capitalize;
+    }
+    .socialIcons ul {
+        gap: 1vw;
+    }
+    .socialIcons ul li .fab{
+        font-size: 30px;
+    }
 }
